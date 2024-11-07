@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.fc .fc-toolbar {
+    @apply bg-gradient-to-r from-orange-400 to-orange-600 p-2 rounded-t-lg shadow-lg max-w-full overflow-hidden;
+  }
+
+  .fc .fc-daygrid-day {
+    @apply border border-orange-200 hover:bg-orange-50 transition-colors duration-300 max-w-full;
+  }
+
+  .fc .fc-event {
+    @apply bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded p-1
+    hover:from-orange-600 hover:to-orange-700 shadow cursor-pointer 
+    transition-all duration-300 text-[10px] md:text-xs overflow-hidden whitespace-nowrap;
+  }
+
+  .fc .fc-day-today {
+    @apply bg-orange-100/80 !important;
+  }
+
+  .fc .fc-header-toolbar {
+    @apply flex flex-col gap-2 bg-gradient-to-b from-orange-50 to-orange-100 
+    p-2 rounded-lg shadow mb-2 max-w-full overflow-x-auto;
+  }
+  
+  .fc .fc-toolbar-chunk {
+    @apply flex flex-wrap items-center gap-1 justify-center w-full;
+  }
+  
+  .fc .fc-button {
+    @apply bg-gradient-to-r from-orange-500 to-orange-600 text-white px-2 py-1 rounded
+    hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow
+    text-[10px] md:text-xs font-medium focus:ring-1 focus:ring-orange-400 
+    min-w-[32px] h-[24px] md:h-[32px] flex items-center justify-center;
+  }
+  
+  .fc .fc-button.fc-button-active {
+    @apply bg-gradient-to-r from-orange-700 to-orange-800 border border-orange-900 text-white shadow-inner;
+  }
+  
+  .fc .fc-toolbar-title {
+    @apply text-base md:text-xl font-bold text-orange-800 tracking-wide text-center w-full;
+  }
+
+  .fc .fc-col-header-cell {
+    @apply bg-orange-200 text-orange-900 font-semibold py-1 text-[10px] md:text-xs;
+  }
+
+  .fc .fc-daygrid-day-number {
+    @apply text-orange-700 font-medium text-[10px] md:text-xs p-1;
+  }
+
+  .fc .fc-daygrid-more-link {
+    @apply text-orange-600 font-medium text-[10px] md:text-xs;
+  }
+
+  .fc .fc-timegrid-slot {
+    @apply hover:bg-orange-50 transition-colors duration-200;
+  }
+
+  /* Critical Mobile Fixes */
+  .fc {
+    @apply max-w-full overflow-x-auto;
+  }
+
+  .fc-view {
+    @apply min-w-full;
+  }
+
+  .fc-view-harness {
+    @apply h-[500px] md:h-[600px];
+  }
+
+  .fc-scrollgrid {
+    @apply !border-collapse;
+  }
+
+  .fc-scrollgrid-section-header {
+    @apply sticky top-0 z-10;
+  }
+
+  .fc-daygrid-day-frame {
+    @apply min-h-[60px] md:min-h-[100px];
+  }
+
+  .fc-daygrid-day-events {
+    @apply min-h-[20px];
+  }
+
+  /* Time Grid Specific */
+  .fc-timegrid-axis {
+    @apply w-[40px] md:w-[60px];
+  }
+
+  .fc-timegrid-slot-label {
+    @apply text-[10px] md:text-xs;
+  }
+
+  .fc-timegrid-event-harness {
+    @apply max-w-[calc(100%-4px)];
+  }
+
+  /* Month View Specific */
+  .fc-daygrid-day-frame {
+    @apply p-1;
+  }
+
+  .fc-daygrid-event-harness {
+    @apply mx-0 my-[2px];
+  }
+
+  /* Button Group Fixes */
+  .fc-button-group {
+    @apply flex flex-nowrap;
+  }
+
+  .fc-button-group .fc-button {
+    @apply rounded-none first:rounded-l last:rounded-r border-r border-orange-400 last:border-r-0;
+  }
